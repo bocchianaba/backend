@@ -1,0 +1,6 @@
+api/__pycache__/
+.vscode/
+api/serializers/__pycache__/
+backend/__pycache__/
+api/views/__pycache__/
+api/migrations/__pycache__/
