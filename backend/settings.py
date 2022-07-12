@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['*']
 
 CORS_ORIGIN_WHITELIST = (
     "http://127.0.0.1:8080",
+    "https://bougna-store.herokuapp.com"
 )
 
 CORS_ALLOWED_ORIGINS =[
