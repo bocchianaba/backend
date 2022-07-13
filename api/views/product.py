@@ -27,6 +27,10 @@ class MyProductDetailView(APIView):
             raise Http404
 
     def get(self, request, *args, **kwargs):
+        if(kwargs['pk']):
+            product = self.get_object(kwargs['pk'])
+            serializer = ProductSerializer(product, context={"request": request})
+            return Response(serializer.data)
         product = Product.objects.filter(created_by=request.user.id)
         serializer = ProductSerializer(product, context={"request": request}, many=True)
         response = serializer.data
